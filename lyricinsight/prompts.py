@@ -23,7 +23,7 @@ maitoshi tsumeta ku a shi ra u
 """,
         """
 ka ji ka n da ko ko ro(憔悴的心) hu ru e ru ma na(摇曳不定的目光) za shi se~ka i de(这世间)
-bo ku wa(唯我是) hi to ri bo tchi(孤身一人) da tta(曾经) chi ru ko to shi ka shi ra na i(这不停凋零的春季)
+bo ku wa(唯我是) hi to ri bo tchi(孤身一人) da tta(曾经) chi ru ko to shi ka shi ra na i ha ru wa(这不停凋零的春季)
 mai to shi(每年) tsu me ta ku(冷淡地) a shi ra u(应付)
 """,
     ),
