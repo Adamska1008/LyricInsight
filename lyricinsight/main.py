@@ -1,6 +1,6 @@
 import argparse
 from openai import OpenAI
-import prompts
+from . import prompts
 
 
 def transform(input: str) -> str:
@@ -19,7 +19,7 @@ def transform(input: str) -> str:
     return completion.choices[0].message.content
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="将日文歌词解析为易于练习演唱的格式。")
     parser.add_argument("file", type=str, help="歌词文件")
 
@@ -28,7 +28,10 @@ if __name__ == "__main__":
 
     with open(filename, "r") as f:
         content = f.read()
-
-    transformed = transform(content)
     print("歌词转换中……")
+    transformed = transform(content)
     print(transformed)
+
+
+if __name__ == "__main__":
+    main()

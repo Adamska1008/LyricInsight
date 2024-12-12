@@ -30,7 +30,7 @@ kuragari no naka ippoutsuukou ni ta da ta da
 运行
 
 ```sh
-python lyricinsight/main.py examples/haruhikage.txt 
+lyricinsight examples/haruhikage.txt 
 ```
 
 输出
@@ -51,9 +51,7 @@ hi ka ri wa ya sa shi ku(是光芒温柔地) tsu re da tsu yo(与我结伴前行
 .... 
 ```
 
-## Install
-
-### Env
+## Env
 
 使用.yml文件创建conda环境。yml由下列指令导出：
 
@@ -69,8 +67,14 @@ conda env create -f environment.yml --name lyric
 
 需要自行配置`OPENAI_API_KEY`。
 
-### Usage
+## Install
+
+```python
+pip install .
+```
+
+## Usage
 
 ```bash
-python lyricinsight/main.py examples/haruhikage.txt
+python lyricinsight examples/haruhikage.txt
 ```
