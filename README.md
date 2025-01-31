@@ -18,9 +18,9 @@ i ppo u tsuu ko u (单向通行)
 
 通过prompt engineering实现，目前只使用OpenAI的gpt-4o-mini。**注意**，由AI生成的内容不保证正确性，使用时请自行检查。
 
-## Example
+## Usage
 
-以春日影为例。将歌词放在`txt`文件中：
+以春日影为例。将歌词放在文本文件中：
 
 ```plaintext
 # examples/haruhikage.txt
@@ -46,10 +46,10 @@ kuragari no naka ippoutsuukou ni ta da ta da
 运行
 
 ```sh
-lyricinsight examples/haruhikage.txt 
+uv run main.py [FILENAME]
 ```
 
-输出
+输出将保存到后缀带有`_transformed`的文本文件中。
 
 ```plaintext
 歌词转换中……
@@ -67,30 +67,14 @@ hi ka ri wa ya sa shi ku(是光芒温柔地) tsu re da tsu yo(与我结伴前行
 .... 
 ```
 
-## Env
+```sh
+usage: main.py [-h] file
 
-使用.yml文件创建conda环境。yml由下列指令导出：
+将日文歌词解析为易于练习演唱的格式。
 
-```bash
-conda env export | head -n -1 > environment.yml
-```
+positional arguments:
+  file        歌词文件
 
-运行
-
-```bash
-conda env create -f environment.yml --name lyric
-```
-
-需要自行配置`OPENAI_API_KEY`。
-
-## Install
-
-```python
-pip install .
-```
-
-## Usage
-
-```bash
-lyricinsight examples/haruhikage.txt
+options:
+  -h, --help  show this help message and exit
 ```
